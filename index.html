@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>금정회관 스마트 웨이팅 시스템</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 헤더 -->
+    <header>
+        <h1>🍽️ 금정회관 스마트 웨이팅</h1>
+
+        <p>
+            실시간 혼잡도 및 원격 웨이팅 시스템
+        </p>
+    </header>
+
+    <!-- 식당 혼잡도 -->
+    <section class="card">
+
+        <h2>📊 식당별 실시간 혼잡도</h2>
+
+        <!-- 1층 학생식당 -->
+        <div class="floor busy">
+
+            <div>
+                <h3>1층 학생식당</h3>
+                <p>혼잡 🔴</p>
+            </div>
+
+            <span>18분</span>
+
+        </div>
+
+        <!-- 2층 교직원식당 -->
+        <div class="floor normal">
+
+            <div>
+                <h3>2층 교직원식당</h3>
+                <p>보통 🟡</p>
+            </div>
+
+            <span>8분</span>
+
+        </div>
+
+    </section>
+
+    <!-- 메뉴별 혼잡도 -->
+    <section class="card">
+
+        <h2>🍱 메뉴별 혼잡도</h2>
+
+        <!-- 1층 정식 -->
+        <div class="menu-item">
+
+            <p>1층 학생식당 - 정식</p>
+
+            <div class="bar">
+                <div class="fill high"></div>
+            </div>
+
+        </div>
+
+        <!-- 1층 일품 -->
+        <div class="menu-item">
+
+            <p>1층 학생식당 - 일품</p>
+
+            <div class="bar">
+                <div class="fill medium"></div>
+            </div>
+
+        </div>
+
+        <!-- 2층 교직원식당 -->
+        <div class="menu-item">
+
+            <p>2층 교직원식당</p>
+
+            <div class="bar">
+                <div class="fill low"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 웨이팅 등록 -->
+    <section class="card">
+
+        <h2>📝 원격 웨이팅 등록</h2>
+
+        <input
+                type="text"
+                id="name"
+                placeholder="이름 입력"
+        >
+
+        <select id="restaurant">
+
+            <option>1층 학생식당 - 정식</option>
+
+            <option>1층 학생식당 - 일품</option>
+
+            <option>2층 교직원식당</option>
+
+        </select>
+
+        <button onclick="registerWaiting()">
+
+            대기 등록하기
+
+        </button>
+
+    </section>
+
+    <!-- 결과 화면 -->
+    <section
+            class="card hidden"
+            id="resultCard"
+    >
+
+        <h2>🎫 내 대기 정보</h2>
+
+        <div class="info-box">
+
+            <p id="myRestaurant"></p>
+
+            <p id="myNumber"></p>
+
+            <p id="currentNumber"></p>
+
+            <p id="remainTime"></p>
+
+        </div>
+
+        <!-- 진행 바 -->
+        <div class="progress-container">
+
+            <div
+                    class="progress-bar"
+                    id="progressBar"
+            ></div>
+
+        </div>
+
+        <!-- 알림 -->
+        <div
+                class="alert-box"
+                id="alertBox"
+        >
+
+            🔔 현재 대기 중입니다.
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

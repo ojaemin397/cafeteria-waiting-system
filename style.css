@@ -1,0 +1,277 @@
+/* 한글 깨짐 방지 */
+@charset "UTF-8";
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: "Malgun Gothic", sans-serif;
+
+    background-color: #f4f6f9;
+
+    color: #333;
+
+}
+
+.container {
+
+    width: 90%;
+
+    max-width: 500px;
+
+    margin: 30px auto;
+
+}
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+header h1 {
+
+    margin-bottom: 10px;
+
+}
+
+header p {
+
+    color: gray;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+.card h2 {
+
+    margin-bottom: 15px;
+
+}
+
+.floor {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-top: 10px;
+
+}
+
+.busy {
+
+    background-color: #ffd6d6;
+
+}
+
+.normal {
+
+    background-color: #fff2cc;
+
+}
+
+.floor span {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+.menu-item {
+
+    margin-bottom: 20px;
+
+}
+
+.bar {
+
+    width: 100%;
+
+    height: 15px;
+
+    background-color: #ddd;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 8px;
+
+}
+
+.fill {
+
+    height: 100%;
+
+    border-radius: 20px;
+
+}
+
+.high {
+
+    width: 85%;
+
+    background-color: #ff6b6b;
+
+}
+
+.medium {
+
+    width: 55%;
+
+    background-color: #ffd166;
+
+}
+
+.low {
+
+    width: 25%;
+
+    background-color: #4caf50;
+
+}
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+    font-size: 15px;
+
+}
+
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #4caf50;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    background-color: #43a047;
+
+}
+
+.info-box p {
+
+    margin-bottom: 10px;
+
+    font-size: 17px;
+
+}
+
+.progress-container {
+
+    width: 100%;
+
+    height: 18px;
+
+    background-color: #ddd;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+}
+
+.progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background-color: #4caf50;
+
+    transition: width 0.5s;
+
+}
+
+.alert-box {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background-color: #d1ecf1;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+/* 모바일 최적화 */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: 95%;
+
+    }
+
+}
